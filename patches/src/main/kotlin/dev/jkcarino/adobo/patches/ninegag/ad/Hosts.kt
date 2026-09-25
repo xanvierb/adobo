@@ -14,15 +14,15 @@ internal const val AD_HOSTS = """
     protected-by.clarium.io
     cdn.confiant-integrations.net
     firebase-settings.crashlytics.com
-    ad.doubleclick.net
-    googleads.g.doubleclick.net
+    doubleclick.net
     fyber.com
     mediation.goog
     google-analytics.com
     fundingchoicesmessages.google.com
     mobileads.google.com
     www.googleadservices.com
-    pagead2.googlesyndication.com
+    googlesyndication.com
+    googletagservices.com
     inmobi.com
     supply.inmobicdn.net
     cdn2.inner-active.mobi

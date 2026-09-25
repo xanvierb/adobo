@@ -9,7 +9,7 @@ import app.morphe.patcher.string
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
-internal object AdGateFingerprint : Fingerprint(
+internal object LegacyAdGateFingerprint : Fingerprint(
     returnType = "Z",
     parameters = listOf(),
     accessFlags = listOf(
@@ -37,13 +37,25 @@ internal object AdGateFingerprint : Fingerprint(
     )
 )
 
-internal object RuntimeAdGateFingerprint : Fingerprint(
+internal object LegacyRuntimeAdGateFingerprint : Fingerprint(
     name = "invokeSuspend",
     returnType = "Ljava/lang/Object;",
     parameters = listOf("Ljava/lang/Object;"),
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
     filters = listOf(
         string("adsEnabled: consentProvided="),
+        string("9Ads")
+    )
+)
+
+internal object AdBlockReasonFlowFingerprint : Fingerprint(
+    name = "invokeSuspend",
+    returnType = "Ljava/lang/Object;",
+    parameters = listOf("Ljava/lang/Object;"),
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    filters = listOf(
+        string("adsEnabled: isInitialized="),
+        string(", blockedBy="),
         string("9Ads")
     )
 )

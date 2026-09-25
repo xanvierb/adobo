@@ -8,6 +8,7 @@ import dev.jkcarino.adobo.util.set
 
 private const val AD_CONTAINER_ID = "adview_adhesion_banner_container"
 private const val LAYOUT_HEIGHT_ATTR = "android:layout_height"
+private const val LEGACY_NATIVE_AD_LAYOUT = "res/layout/view_aatk_native.xml"
 
 val hideAdContainersPatch = resourcePatch(
     description = "Removes blank ad containers from the layout."
@@ -29,10 +30,13 @@ val hideAdContainersPatch = resourcePatch(
             }
         }
 
-        document("res/layout/view_aatk_native.xml").use { document ->
-            val root = document.documentElement
-            root["android:visibility"] = "gone"
-            root[LAYOUT_HEIGHT_ATTR] = "0dp"
+        // AATKit was removed in 8.24.4, but this layout is still present in older targets.
+        if (get(LEGACY_NATIVE_AD_LAYOUT, copy = false).isFile) {
+            document(LEGACY_NATIVE_AD_LAYOUT).use { document ->
+                val root = document.documentElement
+                root["android:visibility"] = "gone"
+                root[LAYOUT_HEIGHT_ATTR] = "0dp"
+            }
         }
     }
 }
