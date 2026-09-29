@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/xanvierb/adobo/compare/v1.0.0...v1.0.1) (2026-09-29)
+
+### Bug Fixes
+
+* update url to my repo ([49fb3fd](https://github.com/xanvierb/adobo/commit/49fb3fdc0dcdb86d04f66f9026a9e57a5b80f070))
+
 ## 1.0.0 (2026-09-29)
 
 ### Bug Fixes
