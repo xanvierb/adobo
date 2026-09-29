@@ -144,7 +144,7 @@ or [Morphe Manager](https://github.com/MorpheApp/morphe-manager).
 
 #### Option A: One-click import (requires v1.11.0 or later)
 
-Tap [this link](https://morphe.software/add-source?github=jkennethcarino/adobo) to import Adobong
+Tap [this link](https://morphe.software/add-source?github=xanvierb/adobo) to import Adobong
 Morphe patches directly into Morphe Manager in just a click!
 
 #### Option B: Manual import
