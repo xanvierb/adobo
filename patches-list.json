@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.5.0",
+  "version": "1.0.0",
   "patches": [
     {
       "name": "Always-incognito mode",
@@ -1878,6 +1878,13 @@
             "85581f5f4501c97a2c8bfa6f8942cfa829b0fc2d531288d6d77ce16ff30e4219"
           ],
           "targets": [
+            {
+              "version": "8.24.4",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": 27,
+              "description": null
+            },
             {
               "version": "8.17.5",
               "versionCodes": null,
